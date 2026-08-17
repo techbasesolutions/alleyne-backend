@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_blocks_article_head_imgs",
+  "info": {
+    "displayName": "articleHeadImg"
+  },
+  "options": {},
+  "attributes": {
+    "mobile": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "tablet": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "desktop": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

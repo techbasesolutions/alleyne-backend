@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_blocks_listing_props",
+  "info": {
+    "displayName": "listingProps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "listingPropNumber": {
+      "type": "integer",
+      "required": true
+    },
+    "listingPropType": {
+      "type": "string"
+    },
+    "listingPropIcon": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

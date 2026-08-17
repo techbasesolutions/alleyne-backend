@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_blocks_amenities",
+  "info": {
+    "displayName": "amenity"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}

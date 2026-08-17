@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_sections_exclusive_listings",
+  "info": {
+    "displayName": "exclusiveListing",
+    "icon": "cube",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.header"
+    },
+    "buttonFromLink": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.link"
+    },
+    "title": {
+      "type": "string"
+    },
+    "listings": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::listing.listing"
+    }
+  }
+}

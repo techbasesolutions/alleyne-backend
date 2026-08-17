@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_sections_listing_details_bodies",
+  "info": {
+    "displayName": "listingDetailsBody",
+    "icon": "cube",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "propDesc": {
+      "type": "text"
+    },
+    "galleryImages": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "amenity": {
+      "displayName": "amenity",
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.amenity"
+    },
+    "embeddedGoogleMap": {
+      "type": "text"
+    }
+  }
+}

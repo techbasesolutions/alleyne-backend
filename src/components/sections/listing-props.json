@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_sections_listing_props",
+  "info": {
+    "displayName": "listingProps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "propAmount": {
+      "type": "decimal"
+    },
+    "propText": {
+      "type": "string"
+    },
+    "propIcon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

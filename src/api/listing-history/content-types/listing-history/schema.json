@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "listing_histories",
+  "info": {
+    "singularName": "listing-history",
+    "pluralName": "listing-histories",
+    "displayName": "ListingHistory",
+    "description": "Field-level change log for canonical listings."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "listing": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::canonical-listing.canonical-listing",
+      "required": true
+    },
+    "changedField": {
+      "type": "string",
+      "required": true
+    },
+    "previousValueJson": {
+      "type": "json"
+    },
+    "nextValueJson": {
+      "type": "json"
+    },
+    "changeSource": {
+      "type": "enumeration",
+      "enum": [
+        "agent",
+        "admin",
+        "sync",
+        "system"
+      ],
+      "required": true
+    },
+    "changedAt": {
+      "type": "datetime",
+      "required": true
+    },
+    "changedByUser": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}

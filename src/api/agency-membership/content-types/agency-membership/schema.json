@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "agency_memberships",
+  "info": {
+    "singularName": "agency-membership",
+    "pluralName": "agency-memberships",
+    "displayName": "AgencyMembership",
+    "description": "Links a user to an agency with a role and permission scope."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "agency": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::agency.agency",
+      "required": true
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "required": true
+    },
+    "role": {
+      "type": "enumeration",
+      "enum": [
+        "owner",
+        "manager",
+        "agent",
+        "staff"
+      ],
+      "required": true,
+      "default": "agent"
+    },
+    "permissionsJson": {
+      "type": "json"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "active",
+        "suspended",
+        "invited"
+      ],
+      "default": "invited",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "kind": "collectionType",
+  "collectionName": "source_connections",
+  "info": {
+    "singularName": "source-connection",
+    "pluralName": "source-connections",
+    "displayName": "SourceConnection",
+    "description": "Represents the import relationship for automated listing ingestion."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "domain": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "verificationToken": {
+      "type": "string"
+    },
+    "verificationStatus": {
+      "type": "enumeration",
+      "enum": [
+        "unverified",
+        "pending",
+        "verified"
+      ],
+      "default": "unverified"
+    },
+    "connectionType": {
+      "type": "enumeration",
+      "enum": [
+        "sitemap",
+        "api",
+        "rss",
+        "manual"
+      ],
+      "default": "sitemap"
+    },
+    "syncFrequency": {
+      "type": "enumeration",
+      "enum": [
+        "hourly",
+        "daily",
+        "weekly"
+      ],
+      "default": "daily"
+    },
+    "lastSyncAt": {
+      "type": "datetime"
+    },
+    "syncStatus": {
+      "type": "enumeration",
+      "enum": [
+        "idle",
+        "running",
+        "failed",
+        "success"
+      ],
+      "default": "idle"
+    },
+    "owner": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "allowedPaths": {
+      "type": "json"
+    },
+    "blockedPaths": {
+      "type": "json"
+    },
+    "agency": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::agency.agency"
+    },
+    "active": {
+      "type": "boolean",
+      "default": false
+    },
+    "blockShortTermImports": {
+      "type": "boolean",
+      "default": true
+    },
+    "allowedInventoryTypesJson": {
+      "type": "json"
+    },
+    "blockedInventoryTypesJson": {
+      "type": "json"
+    },
+    "policyNotes": {
+      "type": "text"
+    },
+    "lastSuccessfulSyncAt": {
+      "type": "datetime"
+    },
+    "lastErrorAt": {
+      "type": "datetime"
+    },
+    "domainType": {
+      "type": "enumeration",
+      "enum": [
+        "agent_website",
+        "agency_website",
+        "aggregator",
+        "portal",
+        "ical_feed",
+        "unknown"
+      ],
+      "default": "unknown"
+    },
+    "startUrl": {
+      "type": "string"
+    },
+    "agentNameFilter": {
+      "type": "string"
+    }
+  }
+}

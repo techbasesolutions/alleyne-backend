@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_sections_related_articles",
+  "info": {
+    "displayName": "relatedArticles",
+    "icon": "cube",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "articles": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::article.article"
+    },
+    "buttonFromLink": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.link"
+    },
+    "title": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.header"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "agent_testimonials",
+  "info": {
+    "singularName": "agent-testimonial",
+    "pluralName": "agent-testimonials",
+    "displayName": "AgentTestimonial",
+    "description": "Client testimonials attributed to a specific agent user."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "agentUserId": {
+      "type": "integer",
+      "required": true
+    },
+    "clientName": {
+      "type": "string",
+      "required": true
+    },
+    "clientRole": {
+      "type": "string"
+    },
+    "quote": {
+      "type": "text",
+      "required": true
+    },
+    "rating": {
+      "type": "integer",
+      "min": 1,
+      "max": 5
+    }
+  }
+}

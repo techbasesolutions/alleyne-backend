@@ -1,0 +1,345 @@
+{
+  "kind": "collectionType",
+  "collectionName": "canonical_listings",
+  "info": {
+    "singularName": "canonical-listing",
+    "pluralName": "canonical-listings",
+    "displayName": "CanonicalListing",
+    "description": "Structured property listing entity. Separate from the CMS Listing content type. This is the source of truth for search, display, and agent workspace."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "inventoryMode": {
+      "type": "enumeration",
+      "enum": [
+        "native",
+        "imported_unclaimed",
+        "imported_claimed",
+        "hybrid"
+      ],
+      "default": "native",
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "draft",
+        "ready",
+        "active",
+        "suppressed",
+        "under_offer",
+        "sold",
+        "rented",
+        "archived"
+      ],
+      "default": "draft",
+      "required": true
+    },
+    "propertyCategory": {
+      "type": "enumeration",
+      "enum": [
+        "residential",
+        "land",
+        "commercial",
+        "commercial_land",
+        "short_stay"
+      ],
+      "required": true
+    },
+    "transactionType": {
+      "type": "enumeration",
+      "enum": [
+        "for_sale",
+        "for_rent",
+        "short_stay"
+      ],
+      "required": true
+    },
+    "buildingType": {
+      "type": "enumeration",
+      "enum": [
+        "house",
+        "chattel_house",
+        "apartment",
+        "condo",
+        "townhouse",
+        "villa",
+        "penthouse",
+        "studio",
+        "duplex",
+        "office",
+        "retail",
+        "warehouse",
+        "mixed_use",
+        "hotel"
+      ]
+    },
+    "utilitiesIncluded": {
+      "type": "boolean",
+      "default": false
+    },
+    "bookingMode": {
+      "type": "enumeration",
+      "enum": [
+        "referral_only",
+        "enquiry_only",
+        "request_to_book",
+        "instant_book"
+      ],
+      "default": "enquiry_only"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "priceDisplay": {
+      "type": "string"
+    },
+    "priceMinor": {
+      "type": "integer"
+    },
+    "currency": {
+      "type": "enumeration",
+      "enum": [
+        "BBD",
+        "USD",
+        "EUR",
+        "GBP"
+      ],
+      "default": "BBD"
+    },
+    "addressLine1": {
+      "type": "string"
+    },
+    "addressLine2": {
+      "type": "string"
+    },
+    "locality": {
+      "type": "string"
+    },
+    "parish": {
+      "type": "enumeration",
+      "enum": [
+        "Christ Church",
+        "St Andrew",
+        "St George",
+        "St James",
+        "St John",
+        "St Joseph",
+        "St Lucy",
+        "St Michael",
+        "St Peter",
+        "St Philip",
+        "St Thomas"
+      ]
+    },
+    "postcode": {
+      "type": "string"
+    },
+    "countryCode": {
+      "type": "string",
+      "default": "BB"
+    },
+    "lat": {
+      "type": "decimal"
+    },
+    "lng": {
+      "type": "decimal"
+    },
+    "bedrooms": {
+      "type": "integer"
+    },
+    "bathrooms": {
+      "type": "integer"
+    },
+    "parkingSpaces": {
+      "type": "integer"
+    },
+    "landSizeSqm": {
+      "type": "decimal"
+    },
+    "landSizeAcres": {
+      "type": "decimal"
+    },
+    "landSizeHectares": {
+      "type": "decimal"
+    },
+    "landSizeValueOriginal": {
+      "type": "string"
+    },
+    "landSizeUnitOriginal": {
+      "type": "string"
+    },
+    "buildingSizeSqm": {
+      "type": "decimal"
+    },
+    "buildingSizeValueOriginal": {
+      "type": "string"
+    },
+    "buildingSizeUnitOriginal": {
+      "type": "string"
+    },
+    "zoning": {
+      "type": "string"
+    },
+    "sourceLabel": {
+      "type": "string"
+    },
+    "sourceDomain": {
+      "type": "string"
+    },
+    "sourceUrl": {
+      "type": "string"
+    },
+    "attributionText": {
+      "type": "string"
+    },
+    "firstPublishedAt": {
+      "type": "datetime"
+    },
+    "lastSyncedAt": {
+      "type": "datetime"
+    },
+    "ownerAgency": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::agency.agency"
+    },
+    "ownerUser": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "primaryMedia": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "media": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "inventoryOriginType": {
+      "type": "enumeration",
+      "enum": [
+        "imported",
+        "native"
+      ],
+      "default": "native"
+    },
+    "inventoryPolicyStatus": {
+      "type": "enumeration",
+      "enum": [
+        "allowed",
+        "blocked",
+        "review_required"
+      ],
+      "default": "allowed"
+    },
+    "nativeShortTermManaged": {
+      "type": "boolean",
+      "default": false
+    },
+    "freshnessStatus": {
+      "type": "enumeration",
+      "enum": [
+        "fresh",
+        "stale",
+        "unknown"
+      ],
+      "default": "unknown"
+    },
+    "neighborhood": {
+      "type": "string"
+    },
+    "hurricaneShutters": {
+      "type": "enumeration",
+      "enum": [
+        "None",
+        "Manual",
+        "Accordion",
+        "Electric"
+      ],
+      "default": "None"
+    },
+    "cisternCapacity": {
+      "type": "integer"
+    },
+    "backupGenerator": {
+      "type": "text"
+    },
+    "viewProfile": {
+      "type": "json"
+    },
+    "coastlineProximity": {
+      "type": "enumeration",
+      "enum": [
+        "Beachfront",
+        "Near-Beach",
+        "Coastal View"
+      ]
+    },
+    "featured": {
+      "type": "boolean",
+      "default": false
+    },
+    "promotedUntil": {
+      "type": "datetime"
+    },
+    "nightlyRateMinor": {
+      "type": "integer"
+    },
+    "minStayNights": {
+      "type": "integer"
+    },
+    "maxStayNights": {
+      "type": "integer"
+    },
+    "checkInTime": {
+      "type": "string"
+    },
+    "checkOutTime": {
+      "type": "string"
+    },
+    "features": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::listing-feature.listing-feature",
+      "mappedBy": "listing"
+    },
+    "spaces": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::listing-space.listing-space",
+      "mappedBy": "listing"
+    },
+    "availabilities": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::listing-availability.listing-availability",
+      "mappedBy": "listing"
+    },
+    "seo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.seo"
+    }
+  }
+}

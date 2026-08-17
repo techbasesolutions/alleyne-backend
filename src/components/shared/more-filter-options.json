@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_shared_more_filter_options",
+  "info": {
+    "displayName": "moreFilterOptions",
+    "icon": "cube"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "icon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

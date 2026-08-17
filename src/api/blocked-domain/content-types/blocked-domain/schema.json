@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blocked_domains",
+  "info": {
+    "singularName": "blocked-domain",
+    "pluralName": "blocked-domains",
+    "displayName": "BlockedDomain",
+    "description": "Admin-configurable list of domains that cannot be used as source connections."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "domain": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "reason": {
+      "type": "string"
+    },
+    "domainType": {
+      "type": "enumeration",
+      "enum": ["aggregator", "portal", "competitor", "spam"],
+      "default": "aggregator"
+    },
+    "addedAt": {
+      "type": "datetime"
+    }
+  }
+}

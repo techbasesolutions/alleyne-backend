@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_blocks_selects",
+  "info": {
+    "displayName": "select",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "sortOptions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::sort-option.sort-option"
+    },
+    "filterOptions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::filter-option.filter-option"
+    }
+  }
+}

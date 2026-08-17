@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_blocks_options",
+  "info": {
+    "displayName": "option"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "text": {
+      "type": "string"
+    }
+  }
+}

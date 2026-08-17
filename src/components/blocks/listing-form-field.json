@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_blocks_listing_form_fields",
+  "info": {
+    "displayName": "listingFormField",
+    "icon": "cube",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "labelTitle": {
+      "type": "string"
+    },
+    "inputType": {
+      "type": "string"
+    },
+    "inputId": {
+      "type": "string"
+    },
+    "inputName": {
+      "type": "string"
+    }
+  }
+}

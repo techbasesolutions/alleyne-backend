@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_sections_listing_tags",
+  "info": {
+    "displayName": "listingTags",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "propertyType": {
+      "type": "string"
+    },
+    "listingPrice": {
+      "type": "string"
+    },
+    "listingStatus": {
+      "type": "string"
+    }
+  }
+}

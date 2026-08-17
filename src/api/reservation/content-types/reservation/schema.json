@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reservations",
+  "info": {
+    "singularName": "reservation",
+    "pluralName": "reservations",
+    "displayName": "Reservation"
+  },
+  "options": { "draftAndPublish": false },
+  "attributes": {
+    "listing": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::canonical-listing.canonical-listing"
+    },
+    "guestUser": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "checkIn": { "type": "date", "required": true },
+    "checkOut": { "type": "date", "required": true },
+    "nights": { "type": "integer" },
+    "guestCount": { "type": "integer" },
+    "status": {
+      "type": "enumeration",
+      "enum": ["pending", "confirmed", "cancelled", "completed"],
+      "default": "pending",
+      "required": true
+    },
+    "totalMinor": { "type": "integer" },
+    "currency": {
+      "type": "enumeration",
+      "enum": ["BBD", "USD", "EUR", "GBP"],
+      "default": "BBD"
+    },
+    "guestNotes": { "type": "text" },
+    "hostNotes": { "type": "text" }
+  }
+}

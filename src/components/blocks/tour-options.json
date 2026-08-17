@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_blocks_tour_options",
+  "info": {
+    "displayName": "tourOptions"
+  },
+  "options": {},
+  "attributes": {
+    "inPersonLabel": {
+      "type": "string"
+    },
+    "videoChatLabel": {
+      "type": "string"
+    }
+  }
+}

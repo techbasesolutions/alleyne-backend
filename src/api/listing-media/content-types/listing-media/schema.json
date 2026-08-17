@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "listing_media",
+  "info": {
+    "singularName": "listing-media",
+    "pluralName": "listing-medias",
+    "displayName": "ListingMedia",
+    "description": "Ordered media assets per canonical listing with rights tracking."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "listing": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::canonical-listing.canonical-listing",
+      "required": true
+    },
+    "asset": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "videos"
+      ]
+    },
+    "caption": {
+      "type": "string"
+    },
+    "sortOrder": {
+      "type": "integer",
+      "default": 0
+    },
+    "copyrightNotice": {
+      "type": "string"
+    },
+    "rightsGranted": {
+      "type": "enumeration",
+      "enum": [
+        "all_rights",
+        "display_only",
+        "attributed"
+      ],
+      "default": "display_only"
+    }
+  }
+}

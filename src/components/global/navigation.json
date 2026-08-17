@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_global_navigations",
+  "info": {
+    "displayName": "Navigation",
+    "description": "",
+    "icon": "cube"
+  },
+  "options": {},
+  "attributes": {
+    "navLogoMobile": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "navLogoDesktop": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "menuIcon": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "navLinks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::nav-link.nav-link"
+    }
+  }
+}

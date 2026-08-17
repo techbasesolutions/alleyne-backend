@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_blocks_listing_contacts",
+  "info": {
+    "displayName": "listingContact",
+    "icon": "cube",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "tourOptions": {
+      "displayName": "tourOptions",
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.tour-options"
+    }
+  }
+}

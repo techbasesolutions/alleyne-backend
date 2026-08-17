@@ -1,0 +1,107 @@
+{
+  "kind": "collectionType",
+  "collectionName": "property_submissions",
+  "info": {
+    "singularName": "property-submission",
+    "pluralName": "property-submissions",
+    "displayName": "PropertySubmission",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "fullName": {
+      "type": "string"
+    },
+    "emailAddress": {
+      "type": "email"
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "property": {
+      "type": "string"
+    },
+    "propertyStatus": {
+      "type": "enumeration",
+      "enum": [
+        "for_sale",
+        "for_rent",
+        "both"
+      ]
+    },
+    "beds": {
+      "type": "integer"
+    },
+    "baths": {
+      "type": "integer"
+    },
+    "area": {
+      "type": "decimal"
+    },
+    "services": {
+      "type": "string"
+    },
+    "floor": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "mediaLink": {
+      "type": "string"
+    },
+    "garden": {
+      "type": "boolean",
+      "default": false
+    },
+    "security": {
+      "type": "boolean",
+      "default": false
+    },
+    "laundry": {
+      "type": "boolean",
+      "default": false
+    },
+    "elevator": {
+      "type": "boolean",
+      "default": false
+    },
+    "pool": {
+      "type": "boolean",
+      "default": false
+    },
+    "garage": {
+      "type": "boolean",
+      "default": false
+    },
+    "internet": {
+      "type": "boolean",
+      "default": false
+    },
+    "dishWasher": {
+      "type": "boolean",
+      "default": false
+    },
+    "listingPrice": {
+      "type": "decimal"
+    },
+    "petsAllowed": {
+      "type": "enumeration",
+      "enum": [
+        "yes",
+        "no",
+        "negotiable"
+      ]
+    }
+  }
+}

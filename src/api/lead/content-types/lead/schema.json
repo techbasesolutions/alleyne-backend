@@ -1,0 +1,80 @@
+{
+  "kind": "collectionType",
+  "collectionName": "leads",
+  "info": {
+    "singularName": "lead",
+    "pluralName": "leads",
+    "displayName": "Lead",
+    "description": "Enquiries submitted by prospective buyers and renters via listing detail pages."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "phone": {
+      "type": "string"
+    },
+    "message": {
+      "type": "text"
+    },
+    "leadSource": {
+      "type": "enumeration",
+      "enum": [
+        "listing_enquiry",
+        "short_stay_enquiry",
+        "whatsapp_click",
+        "phone_click",
+        "email_reveal",
+        "source_referral"
+      ],
+      "default": "listing_enquiry"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "new",
+        "assigned",
+        "contacted",
+        "qualified",
+        "unqualified",
+        "won",
+        "lost",
+        "spam",
+        "archived"
+      ],
+      "default": "new"
+    },
+    "notes": {
+      "type": "text"
+    },
+    "listingTitle": {
+      "type": "string"
+    },
+    "listingSlug": {
+      "type": "string"
+    },
+    "listing": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::canonical-listing.canonical-listing"
+    },
+    "agency": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::agency.agency"
+    },
+    "assignedTo": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}

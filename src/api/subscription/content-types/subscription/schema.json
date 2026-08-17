@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subscriptions",
+  "info": {
+    "singularName": "subscription",
+    "pluralName": "subscriptions",
+    "displayName": "Subscription",
+    "description": "User subscription to a plan tier."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "agency": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::agency.agency"
+    },
+    "plan": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::plan.plan"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": ["active", "past_due", "cancelled", "trialing"],
+      "default": "active"
+    },
+    "stripeSubscriptionId": { "type": "string" },
+    "stripeCustomerId": { "type": "string" },
+    "currentPeriodEnd": { "type": "datetime" },
+    "cancelAtPeriodEnd": { "type": "boolean", "default": false }
+  }
+}

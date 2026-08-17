@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sync_run_items",
+  "info": {
+    "singularName": "sync-run-item",
+    "pluralName": "sync-run-items",
+    "displayName": "SyncRunItem",
+    "description": "Per-listing outcome record for a sync run."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "syncRun": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::sync-run.sync-run"
+    },
+    "sourceListing": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::source-listing.source-listing"
+    },
+    "action": {
+      "type": "enumeration",
+      "enum": [
+        "created",
+        "updated",
+        "unchanged",
+        "blocked",
+        "failed"
+      ]
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "created",
+        "updated",
+        "unchanged",
+        "suppressed",
+        "archived",
+        "low_confidence_review",
+        "conflict_detected",
+        "failed",
+        "blocked_by_policy"
+      ]
+    },
+    "notes": {
+      "type": "text"
+    },
+    "confidenceScore": {
+      "type": "decimal"
+    },
+    "policyReasonCode": {
+      "type": "string"
+    },
+    "classifierOutputJson": {
+      "type": "json"
+    }
+  }
+}

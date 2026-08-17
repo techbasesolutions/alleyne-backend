@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_blocks_listing_infos",
+  "info": {
+    "displayName": "listingInfo"
+  },
+  "options": {},
+  "attributes": {
+    "listingTitle": {
+      "type": "string"
+    },
+    "listingLocation": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "listing_features",
+  "info": {
+    "singularName": "listing-feature",
+    "pluralName": "listing-features",
+    "displayName": "ListingFeature",
+    "description": "Amenity and specification key-value pairs per canonical listing."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "listing": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::canonical-listing.canonical-listing",
+      "inversedBy": "features",
+      "required": true
+    },
+    "featureKey": {
+      "type": "string",
+      "required": true
+    },
+    "featureValue": {
+      "type": "string"
+    },
+    "source": {
+      "type": "enumeration",
+      "enum": [
+        "agent",
+        "admin",
+        "sync",
+        "system"
+      ],
+      "default": "agent"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "infrastructure",
+        "outdoor",
+        "interior",
+        "community",
+        "accessibility",
+        "lifestyle"
+      ],
+      "default": "lifestyle"
+    }
+  }
+}

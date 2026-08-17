@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_items_per_pages",
+  "info": {
+    "displayName": "itemsPerPage",
+    "icon": "cube"
+  },
+  "options": {},
+  "attributes": {
+    "itemsPerPage": {
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_blocks_contact_forms",
+  "info": {
+    "displayName": "contactForm",
+    "icon": "cube",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "contactFormLabel": {
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.contact-form-label"
+    },
+    "buttonFromLink": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.link"
+    },
+    "title": {
+      "type": "string"
+    },
+    "heading": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "policy_block_events",
+  "info": {
+    "singularName": "policy-block-event",
+    "pluralName": "policy-block-events",
+    "displayName": "PolicyBlockEvent",
+    "description": "Audit record for a candidate listing blocked by inventory policy (e.g. short-term classification)."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "sourceConnection": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::source-connection.source-connection"
+    },
+    "sourceListing": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::source-listing.source-listing"
+    },
+    "sourceUrl": {
+      "type": "string"
+    },
+    "candidateInventoryType": {
+      "type": "string"
+    },
+    "blockReasonCode": {
+      "type": "string"
+    },
+    "classifierOutputJson": {
+      "type": "json"
+    },
+    "actionTaken": {
+      "type": "enumeration",
+      "enum": [
+        "auto_blocked",
+        "sent_to_review",
+        "confirmed_by_reviewer",
+        "overridden_by_admin"
+      ],
+      "default": "auto_blocked"
+    },
+    "reviewedAt": {
+      "type": "datetime"
+    }
+  }
+}

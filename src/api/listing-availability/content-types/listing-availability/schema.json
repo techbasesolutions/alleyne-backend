@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "listing_availabilities",
+  "info": {
+    "singularName": "listing-availability",
+    "pluralName": "listing-availabilities",
+    "displayName": "ListingAvailability"
+  },
+  "options": { "draftAndPublish": false },
+  "attributes": {
+    "listing": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::canonical-listing.canonical-listing",
+      "inversedBy": "availabilities"
+    },
+    "date": { "type": "date", "required": true },
+    "availabilityStatus": {
+      "type": "enumeration",
+      "enum": ["available", "blocked", "booked"],
+      "default": "available",
+      "required": true
+    },
+    "nightlyPriceMinor": { "type": "integer" },
+    "minStayNights": { "type": "integer" },
+    "source": {
+      "type": "enumeration",
+      "enum": ["host_override", "platform_rule", "reservation_engine"],
+      "default": "host_override"
+    }
+  }
+}

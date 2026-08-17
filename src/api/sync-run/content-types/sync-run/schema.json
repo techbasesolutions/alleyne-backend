@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sync_runs",
+  "info": {
+    "singularName": "sync-run",
+    "pluralName": "sync-runs",
+    "displayName": "SyncRun",
+    "description": "Audit record for a single ingestion sync job."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "sourceConnection": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::source-connection.source-connection"
+    },
+    "startedAt": {
+      "type": "datetime"
+    },
+    "finishedAt": {
+      "type": "datetime"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "queued",
+        "running",
+        "completed",
+        "completed_with_warnings",
+        "partial_success",
+        "failed",
+        "cancelled"
+      ],
+      "default": "queued"
+    },
+    "pagesScanned": {
+      "type": "integer",
+      "default": 0
+    },
+    "listingsCreated": {
+      "type": "integer",
+      "default": 0
+    },
+    "listingsUpdated": {
+      "type": "integer",
+      "default": 0
+    },
+    "listingsArchived": {
+      "type": "integer",
+      "default": 0
+    },
+    "shortTermCandidatesDetected": {
+      "type": "integer",
+      "default": 0
+    },
+    "shortTermCandidatesBlocked": {
+      "type": "integer",
+      "default": 0
+    },
+    "policyBlockCount": {
+      "type": "integer",
+      "default": 0
+    },
+    "warningsJson": {
+      "type": "json"
+    },
+    "errorsJson": {
+      "type": "json"
+    }
+  }
+}

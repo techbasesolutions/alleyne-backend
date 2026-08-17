@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "listing_spaces",
+  "info": {
+    "singularName": "listing-space",
+    "pluralName": "listing-spaces",
+    "displayName": "ListingSpace",
+    "description": "Room-by-room media sections for a canonical listing."
+  },
+  "options": { "draftAndPublish": false },
+  "attributes": {
+    "listing": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::canonical-listing.canonical-listing",
+      "inversedBy": "spaces"
+    },
+    "spaceType": {
+      "type": "enumeration",
+      "enum": [
+        "living_room", "kitchen", "dining", "primary_suite",
+        "bedroom", "bathroom", "office", "outdoor", "pool",
+        "garden", "garage", "other"
+      ],
+      "required": true
+    },
+    "title": { "type": "string" },
+    "description": { "type": "text" },
+    "sortOrder": { "type": "integer", "default": 0 },
+    "media": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": ["images"]
+    }
+  }
+}

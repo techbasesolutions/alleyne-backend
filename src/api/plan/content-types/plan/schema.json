@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "plans",
+  "info": {
+    "singularName": "plan",
+    "pluralName": "plans",
+    "displayName": "Plan",
+    "description": "Platform subscription plan definitions. Seeded as platform config."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": { "type": "string", "required": true },
+    "slug": {
+      "type": "enumeration",
+      "enum": ["free", "starter", "pro", "agency"],
+      "required": true,
+      "unique": true
+    },
+    "priceUsdMonthly": { "type": "integer", "default": 0 },
+    "nativeListingLimit": { "type": "integer", "default": 5 },
+    "importedListingLimit": { "type": "integer", "default": 0 },
+    "sourceConnectionLimit": { "type": "integer", "default": 0 },
+    "teamSeatLimit": { "type": "integer", "default": 1 },
+    "featuredSlots": { "type": "integer", "default": 0 },
+    "syncFrequency": {
+      "type": "enumeration",
+      "enum": ["none", "weekly", "daily", "hourly"],
+      "default": "none"
+    },
+    "analyticsLevel": {
+      "type": "enumeration",
+      "enum": ["basic", "full", "full_attribution"],
+      "default": "basic"
+    }
+  }
+}

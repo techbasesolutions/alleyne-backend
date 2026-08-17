@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_blocks_searches",
+  "info": {
+    "displayName": "search"
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "placeholderText": {
+      "type": "string"
+    }
+  }
+}

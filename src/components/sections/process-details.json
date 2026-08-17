@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_sections_process_details",
+  "info": {
+    "displayName": "processDetails",
+    "icon": "cube",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "processStep": {
+      "displayName": "text",
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.text"
+    },
+    "heading": {
+      "type": "string"
+    },
+    "processButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.link"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

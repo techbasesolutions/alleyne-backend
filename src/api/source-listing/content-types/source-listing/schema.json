@@ -1,0 +1,92 @@
+{
+  "kind": "collectionType",
+  "collectionName": "source_listings",
+  "info": {
+    "singularName": "source-listing",
+    "pluralName": "source-listings",
+    "displayName": "SourceListing",
+    "description": "Raw imported listing record from a source connection. Never overwritten after initial capture."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "sourceConnection": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::source-connection.source-connection"
+    },
+    "sourceUrl": {
+      "type": "string"
+    },
+    "externalListingId": {
+      "type": "string"
+    },
+    "sourceType": {
+      "type": "string"
+    },
+    "rawPayloadJson": {
+      "type": "json"
+    },
+    "crawlHash": {
+      "type": "string"
+    },
+    "firstSeenAt": {
+      "type": "datetime"
+    },
+    "lastSeenAt": {
+      "type": "datetime"
+    },
+    "importStatus": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "accepted",
+        "blocked",
+        "review_required",
+        "failed"
+      ],
+      "default": "pending"
+    },
+    "confidenceScore": {
+      "type": "decimal"
+    },
+    "suppressedByOwner": {
+      "type": "boolean",
+      "default": false
+    },
+    "candidateInventoryType": {
+      "type": "string"
+    },
+    "blockedByPolicy": {
+      "type": "boolean",
+      "default": false
+    },
+    "blockReasonCode": {
+      "type": "string"
+    },
+    "classifierVersion": {
+      "type": "string"
+    },
+    "policyDecisionAt": {
+      "type": "datetime"
+    },
+    "canonicalListing": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::canonical-listing.canonical-listing"
+    },
+    "reviewStatus": {
+      "type": "enumeration",
+      "enum": [
+        "pending_review",
+        "approved",
+        "rejected"
+      ],
+      "default": "pending_review"
+    },
+    "duplicateWarning": {
+      "type": "text"
+    }
+  }
+}

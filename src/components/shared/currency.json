@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_shared_currencies",
+  "info": {
+    "displayName": "currencySwitch",
+    "icon": "briefcase",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "homeCurrency": {
+      "type": "string"
+    },
+    "foreignCurrency": {
+      "type": "string"
+    },
+    "currencySwitchText": {
+      "type": "string"
+    }
+  }
+}

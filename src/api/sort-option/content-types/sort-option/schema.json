@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sort_options",
+  "info": {
+    "singularName": "sort-option",
+    "pluralName": "sort-options",
+    "displayName": "sortOption"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    }
+  }
+}

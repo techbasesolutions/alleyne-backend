@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_sections_listing_details",
+  "info": {
+    "displayName": "listingDetailsHead",
+    "icon": "cube",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "listingInfo": {
+      "displayName": "listingInfo",
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.listing-info"
+    },
+    "listingTags": {
+      "displayName": "listingTags",
+      "type": "component",
+      "repeatable": false,
+      "component": "sections.listing-tags"
+    }
+  }
+}

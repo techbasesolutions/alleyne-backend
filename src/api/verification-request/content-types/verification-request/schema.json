@@ -1,0 +1,82 @@
+{
+  "kind": "collectionType",
+  "collectionName": "verification_requests",
+  "info": {
+    "singularName": "verification-request",
+    "pluralName": "verification-requests",
+    "displayName": "VerificationRequest",
+    "description": "Tracks identity, domain, and business verification submissions and outcomes."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "ownerType": {
+      "type": "enumeration",
+      "enum": [
+        "agency",
+        "user"
+      ],
+      "required": true
+    },
+    "ownerId": {
+      "type": "string",
+      "required": true
+    },
+    "verificationType": {
+      "type": "enumeration",
+      "enum": [
+        "identity",
+        "domain",
+        "business"
+      ],
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "unstarted",
+        "pending",
+        "verified",
+        "rejected",
+        "manual_review_required",
+        "expired"
+      ],
+      "default": "unstarted",
+      "required": true
+    },
+    "method": {
+      "type": "enumeration",
+      "enum": [
+        "dns_txt",
+        "meta_tag",
+        "email_domain",
+        "business_doc",
+        "admin_manual"
+      ]
+    },
+    "evidenceAsset": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "files",
+        "images"
+      ]
+    },
+    "reviewer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "submittedAt": {
+      "type": "datetime"
+    },
+    "decidedAt": {
+      "type": "datetime"
+    },
+    "notes": {
+      "type": "text"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_blocks_faq_items",
+  "info": {
+    "displayName": "faqItem",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "question": {
+      "type": "string"
+    },
+    "answer": {
+      "type": "text"
+    },
+    "faqIcon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

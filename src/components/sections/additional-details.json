@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_sections_additional_details",
+  "info": {
+    "displayName": "additionalDetails"
+  },
+  "options": {},
+  "attributes": {
+    "dropDownText": {
+      "type": "string"
+    }
+  }
+}

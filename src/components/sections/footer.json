@@ -1,0 +1,51 @@
+{
+  "collectionName": "components_sections_footers",
+  "info": {
+    "displayName": "footer",
+    "icon": "cube",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "footerIcon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "callNowIcon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "phone": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::nav-link.nav-link"
+    },
+    "socials": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::nav-link.nav-link"
+    },
+    "footerNav": {
+      "displayName": "footerNav",
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.footer-nav"
+    },
+    "copyright": {
+      "type": "component",
+      "repeatable": false,
+      "component": "global.copyright"
+    }
+  }
+}

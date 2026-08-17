@@ -1,0 +1,84 @@
+{
+  "kind": "collectionType",
+  "collectionName": "agencies",
+  "info": {
+    "singularName": "agency",
+    "pluralName": "agencies",
+    "displayName": "Agency",
+    "description": "Represents a real estate agency or property management company."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "legalName": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "description": {
+      "type": "text"
+    },
+    "website": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "primaryContactEmail": {
+      "type": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "whatsappNumber": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "active",
+        "suspended"
+      ],
+      "default": "pending"
+    },
+    "isVerified": {
+      "type": "boolean",
+      "default": false
+    },
+    "brandColors": {
+      "type": "json"
+    },
+    "agents": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "agency"
+    },
+    "verificationToken": {
+      "type": "string",
+      "private": true
+    },
+    "verificationDomain": {
+      "type": "string"
+    }
+  }
+}

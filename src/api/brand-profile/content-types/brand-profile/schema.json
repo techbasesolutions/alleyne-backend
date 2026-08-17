@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "brand_profiles",
+  "info": {
+    "singularName": "brand-profile",
+    "pluralName": "brand-profiles",
+    "displayName": "BrandProfile",
+    "description": "Per-agency branding: logo, colours, about, social links, office locations."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "agency": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::agency.agency",
+      "required": true
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "coverImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "brandPrimaryColor": {
+      "type": "string"
+    },
+    "brandSecondaryColor": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "officeLocationsJson": {
+      "type": "json"
+    },
+    "socialLinksJson": {
+      "type": "json"
+    },
+    "ctaText": {
+      "type": "string"
+    }
+  }
+}

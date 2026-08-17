@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_global_copyrights",
+  "info": {
+    "displayName": "copyright",
+    "icon": "stack",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "companyCopy": {
+      "type": "string"
+    },
+    "agencyLink": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::nav-link.nav-link"
+    }
+  }
+}

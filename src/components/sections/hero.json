@@ -1,0 +1,53 @@
+{
+  "collectionName": "components_sections_heroes",
+  "info": {
+    "displayName": "hero",
+    "icon": "cube",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "card": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.card"
+    },
+    "cardHead": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.card"
+    },
+    "ctaBtnLink": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.link"
+    },
+    "title": {
+      "type": "string"
+    },
+    "heroVideo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "videos"
+      ]
+    },
+    "heroVideoPlayIcon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "heroVideoPauseIcon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

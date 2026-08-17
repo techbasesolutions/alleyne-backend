@@ -1,0 +1,54 @@
+{
+  "collectionName": "components_blocks_listing_filters",
+  "info": {
+    "displayName": "listingFilter",
+    "icon": "cube",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "search": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.search"
+    },
+    "select": {
+      "displayName": "select",
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.select"
+    },
+    "dropDownIcon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "moreFilterOptions": {
+      "displayName": "moreFilterOptions",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.more-filter-options"
+    },
+    "searchBtn": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.link"
+    },
+    "sort": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.select"
+    },
+    "pagination": {
+      "type": "component",
+      "repeatable": false,
+      "component": "blocks.select"
+    }
+  }
+}

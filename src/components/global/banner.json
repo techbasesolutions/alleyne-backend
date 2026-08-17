@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_global_banners",
+  "info": {
+    "displayName": "Banner",
+    "icon": "cube",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "currencySwitch": {
+      "displayName": "currency",
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.currency"
+    },
+    "bannerText": {
+      "type": "string"
+    },
+    "link": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::nav-link.nav-link"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_sections_faqs",
+  "info": {
+    "displayName": "faq",
+    "icon": "cube",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.header"
+    },
+    "faqItems": {
+      "displayName": "faqItem",
+      "type": "component",
+      "repeatable": true,
+      "component": "blocks.faq-item"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

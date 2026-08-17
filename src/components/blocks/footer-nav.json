@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_blocks_footer_navs",
+  "info": {
+    "displayName": "footerNav"
+  },
+  "options": {},
+  "attributes": {
+    "links": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::nav-link.nav-link"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "filter_options",
+  "info": {
+    "singularName": "filter-option",
+    "pluralName": "filter-options",
+    "displayName": "filterOption"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "icon": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

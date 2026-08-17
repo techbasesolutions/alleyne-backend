@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_shared_buttons",
+  "info": {
+    "displayName": "button",
+    "icon": "cube",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "theme": {
+      "type": "enumeration",
+      "enum": [
+        "primary",
+        "secondary",
+        "outline"
+      ]
+    },
+    "link": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.link"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

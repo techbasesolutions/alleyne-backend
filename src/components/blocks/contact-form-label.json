@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_blocks_contact_form_labels",
+  "info": {
+    "displayName": "contactFormLabel",
+    "icon": "cube",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "labelTitle": {
+      "type": "string"
+    },
+    "inputType": {
+      "type": "string"
+    },
+    "inputId": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_blocks_blog_filters",
+  "info": {
+    "displayName": "blogFilter",
+    "icon": "cube",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "buttonFromLink": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.link"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}

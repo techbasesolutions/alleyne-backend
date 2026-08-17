@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_sections_contacts",
+  "info": {
+    "displayName": "askUs",
+    "icon": "cube",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.header"
+    },
+    "phoneNumber": {
+      "type": "string"
+    },
+    "buttonFromLink": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.link",
+      "required": true
+    },
+    "callNowIcon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "mobilePhoneIcon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}
