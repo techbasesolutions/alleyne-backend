@@ -340,6 +340,16 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.seo"
+    },
+    "externalId": {
+      "type": "string",
+      "unique": true
+    },
+    "externalImages": {
+      "type": "json"
+    },
+    "community": {
+      "type": "string"
     }
   }
 }
