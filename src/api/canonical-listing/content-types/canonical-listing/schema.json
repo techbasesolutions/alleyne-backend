@@ -350,6 +350,9 @@
     },
     "community": {
       "type": "string"
+    },
+    "videoUrl": {
+      "type": "string"
     }
   }
 }
