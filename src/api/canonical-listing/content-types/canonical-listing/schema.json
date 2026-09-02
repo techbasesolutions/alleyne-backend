@@ -353,6 +353,14 @@
     },
     "videoUrl": {
       "type": "string"
+    },
+    "mapMode": {
+      "type": "enumeration",
+      "enum": [
+        "area",
+        "exact"
+      ],
+      "default": "area"
     }
   }
 }
