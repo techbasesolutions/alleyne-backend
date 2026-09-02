@@ -361,6 +361,9 @@
         "exact"
       ],
       "default": "area"
+    },
+    "hostfullyUid": {
+      "type": "string"
     }
   }
 }
